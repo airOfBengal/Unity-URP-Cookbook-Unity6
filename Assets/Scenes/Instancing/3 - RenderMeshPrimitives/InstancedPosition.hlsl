@@ -2,18 +2,9 @@
 StructuredBuffer<float2> PositionsBuffer;
 #endif
 
-float2 position;
+StructuredBuffer<float2> PositionsBuffer;
 
-void ConfigureProcedural () {
-	#if defined(UNITY_PROCEDURAL_INSTANCING_ENABLED)
-	position = PositionsBuffer[unity_InstanceID];
-	#endif
-}
-
-void ShaderGraphFunction_float (out float2 PositionOut) {
-	PositionOut = position;
-}
-
-void ShaderGraphFunction_half (out half2 PositionOut) {
-	PositionOut = position;
+void ShaderGraphFunction_float(uint instanceID, out float2 PositionOut)
+{
+    PositionOut = PositionsBuffer[instanceID];
 }
