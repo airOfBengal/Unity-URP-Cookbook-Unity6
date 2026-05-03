@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Unity-URP-Cookbook-Unity6.sln",
+    "dotnet.defaultSolution": "Unity-URP-Cookbook-Unity6.slnx",
     "editor.fontSize": 18
 }
